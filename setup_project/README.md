@@ -65,14 +65,16 @@ Create file `phantomjs-shims.js` in `assets/javascript` folder with content  ( [
 
     })();
 
-Add `phantomjs-shims.js` to `assets/javascripts/application.js`:
+
+Add `phantomjs-shims.js`, `underscore.js` and `backbone.js` to `assets/javascripts/application.js`:
 
     //= require jquery
     //= require jquery_ujs
     //= require turbolinks
     //= require phantomjs-shims
     //= require react
-
+    //= require underscore
+    //= require backbone
 ### Install phantomjs
 Mac
 
