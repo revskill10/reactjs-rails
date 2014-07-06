@@ -22,6 +22,78 @@ There are some errors when you run this test because:
 
 Let's fix them.
 
+Firstly, we need to use `gem database_cleaner` to use database truncation strategy. The reason is your javascript call will open new transaction to database, but the default transactional strategy of Rspec will keep data in all transactions independent. That's why you will se no data in a javascript interaction session. So let's add to `Gemfile`, in `group: :test`
+
+    gem 'database_cleaner'
+
+And install it:
+
+    bundle install
+We also configure `Rspec` to use `database_cleaner:`
+
+The `spec/rails_helper.rb` now have the following content:
+
+        # This file is copied to spec/ when you run 'rails generate rspec:install'
+    ENV["RAILS_ENV"] ||= 'test'
+    require 'spec_helper'
+    require File.expand_path("../../config/environment", __FILE__)
+    require 'rspec/rails'
+    require 'capybara/poltergeist'
+    Capybara.javascript_driver = :poltergeist
+    require 'database_cleaner'
+    # Requires supporting ruby files with custom matchers and macros, etc, in
+    # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
+    # run as spec files by default. This means that files in spec/support that end
+    # in _spec.rb will both be required and run as specs, causing the specs to be
+    # run twice. It is recommended that you do not name files matching this glob to
+    # end with _spec.rb. You can configure this pattern with with the --pattern
+    # option on the command line or in ~/.rspec, .rspec or `.rspec-local`.
+    Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+
+    # Checks for pending migrations before tests are run.
+    # If you are not using ActiveRecord, you can remove this line.
+    ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
+
+    RSpec.configure do |config|
+      # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+      config.fixture_path = "#{::Rails.root}/spec/fixtures"
+
+      # If you're not using ActiveRecord, or you'd prefer not to run each of your
+      # examples within a transaction, remove the following line or assign false
+      # instead of true.
+      #config.use_transactional_fixtures = true
+      config.use_transactional_fixtures = false
+
+      config.before(:suite) do
+        DatabaseCleaner.strategy = :truncation
+      end
+
+      config.before(:each) do
+        DatabaseCleaner.start
+      end
+
+      config.after(:each) do
+        DatabaseCleaner.clean
+      end
+
+      # RSpec Rails can automatically mix in different behaviours to your tests
+      # based on their file location, for example enabling you to call `get` and
+      # `post` in specs under `spec/controllers`.
+      #
+      # You can disable this behaviour by removing the line below, and instead
+      # explicitly tag your specs with their type, e.g.:
+      #
+      #     RSpec.describe UsersController, :type => :controller do
+      #       # ...
+      #     end
+      #
+      # The different available types are documented in the features, such as in
+      # https://relishapp.com/rspec/rspec-rails/docs
+      config.infer_spec_type_from_file_location!
+    end
+
+Let's generate model:
+
     rails g model Entry title:string content:text blog_id:integer
     rake db:migrate
     rake db:test:clone
