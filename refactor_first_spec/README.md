@@ -8,11 +8,7 @@ Create file `spec\guest_see_blogs_spec:`
 
     feature 'Guest can see all blogs' do
     	scenario 'Guest can see all blogs', :js => true do
-    		visit '/'
-    		click_link 'New Blog'
-
-    		fill_in 'name', with: 'My blog'
-    		click_button 'Create Blog'
+    		Blog.create('My blog')
     		visit '/'
     		expect(page).to have_content('My blog')
     	end
