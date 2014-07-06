@@ -1,0 +1,10 @@
+{
+    "name": "React.js, The Rails way",
+    "version": "0.0.0",
+    "description": "",    
+    "author": "Truong Hoang Dung <hoangdung1987@gmail.com>",
+    "dependencies": {
+        "gitbook-plugin-autocover": "0.0.5",
+        "gitbook-plugin-disqus": "0.0.1"
+    }
+}
