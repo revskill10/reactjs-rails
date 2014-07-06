@@ -1,12 +1,4 @@
 {
-    "plugins": [
-        "disqus"
-    ],
-    "pluginsConfig": {
-        "disqus": {
-            "shortName": "rails-and-react-js"
-        }
-    },
     "pdf": {
         "toc": true,
         "pageNumbers": true,
