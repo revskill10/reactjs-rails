@@ -8,7 +8,20 @@ The project will follow BDD methodology. Each feature should be described with a
 
 Hope you enjoy this journey!
 
+# Table of contents
 
+Introduction
+1. Requirements (completed)
+2. Setup project (completed)
+3. First spec: Create blog (completed)
+4. Refactor first spec (completed)
+5. Second spec: View blog (completed)
+6. Authentication (in progress)
+7. What is Flux and Why using it ? (in progress)
+8. Refactor project using Flux (pending)
+9. Conclusion
+
+## Contacts:
+[My Twitter](https://twitter.com/revskill)
 [My Google Play applications](https://play.google.com/store/apps/developer?id=FPMI)
-
 [Source code used in this book](https://github.com/checkraiser/reactjs-rails-code)
