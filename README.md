@@ -20,6 +20,10 @@ Hope you enjoy this journey!
 8. Refactor project using Flux (pending)
 9. Conclusion
 
+# Real world project using this book:
+
+- [HPU Online Rollcall Attendance](http://qlgd.hpu.edu.vn): [Source code](https://github.com/checkraiser/qlgd)
+
 ## Contacts:
 
 - [My blog](http://vocaja.com)
