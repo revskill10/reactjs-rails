@@ -9,6 +9,6 @@ The project will follow BDD methodology. Each feature should be described with a
 Hope you enjoy this journey!
 
 
-[![Build Status](https://www.gitbook.io/button/status/book/checkraiser/rails-and-react-js)](https://www.gitbook.io/book/checkraiser/rails-and-react-js/activity)
+[My Google Play applications](https://play.google.com/store/apps/developer?id=FPMI)
 
 [Source code used in this book](https://github.com/checkraiser/reactjs-rails-code)
