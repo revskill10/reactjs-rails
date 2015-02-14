@@ -22,6 +22,7 @@ Hope you enjoy this journey!
 
 ## Contacts:
 
+- [My blog](http://vocaja.com)
 - [My Twitter](https://twitter.com/revskill)
 - [My Google Play applications](https://play.google.com/store/apps/developer?id=FPMI)
 - [Source code used in this book](https://github.com/checkraiser/reactjs-rails-code)
