@@ -1,5 +1,7 @@
 # Introduction
 
+# Introduction
+
 This book is a guide to use Rails with React.js framework.
 
 The aim of the book is to build a blogging platform in which each author could have his own blog.
@@ -24,7 +26,11 @@ Hope you enjoy this journey!
 
 - [HPU Online Rollcall Attendance](http://qlgd.hpu.edu.vn)([Source code](https://github.com/checkraiser/qlgd))
 
-## Contacts:
+# Roadmap:
+
+- Write chapters using Flux and refactor project.
+
+# Contact:
 
 - [My blog](http://vocaja.com)
 - [My Twitter](https://twitter.com/revskill)
