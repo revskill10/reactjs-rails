@@ -22,7 +22,7 @@ Hope you enjoy this journey!
 
 # Real world project using this book:
 
-- [HPU Online Rollcall Attendance](http://qlgd.hpu.edu.vn): [Source code](https://github.com/checkraiser/qlgd)
+- [HPU Online Rollcall Attendance](http://qlgd.hpu.edu.vn)([Source code](https://github.com/checkraiser/qlgd))
 
 ## Contacts:
 
