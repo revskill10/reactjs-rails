@@ -10,7 +10,6 @@ Hope you enjoy this journey!
 
 # Table of contents
 
-Introduction
 1. Requirements (completed)
 2. Setup project (completed)
 3. First spec: Create blog (completed)
