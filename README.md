@@ -12,14 +12,14 @@ Hope you enjoy this journey!
 
 # Table of contents
 
-1. Requirements (completed)
-2. Setup project (completed)
-3. First spec: Create blog (completed)
-4. Refactor first spec (completed)
-5. Second spec: View blog (completed)
-6. Authentication (in progress)
-7. What is Flux and Why using it ? (in progress)
-8. Refactor project using Flux (pending)
+1. Requirements 
+2. Setup project 
+3. First spec: Create blog 
+4. Refactor first spec 
+5. Second spec: View blog 
+6. Authentication 
+7. What is Flux and Why using it ? 
+8. Refactor project using Flux 
 9. Conclusion
 
 # Real world project using this book:
