@@ -7,5 +7,5 @@
 * [Refactor first spec](refactor_first_spec/README.md)
 * [Second spec: View blog](second_spec_view_blog/README.md)
 * [Authentication](authentication/README.md)
-* What is Flux and Why using it ?
+* [What is Flux and Why using it ?](what_is_flux_and_why_using_it.md)
 
