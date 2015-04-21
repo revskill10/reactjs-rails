@@ -130,4 +130,40 @@ Add it to `app/assets/javascripts/index.js.jsx` file:
     ...
     });
     
+
+Run `rspec` again, you will see the error says that `There is no input element email and password`. Let's create it.
+
+Add the `SignInView` class to `authentication.js.jsx`:
+
+    var SignInView = React.createClass({
+    	render: function(){
+    		return (
+    			<div>
+    				<form>
+    					<input type="text" id="email" /><br/>
+    					<input type="password" id="password"/>
+    				</form>
+    			</div>
+    		);
+    	}
+    }) 
+    
+Add the new route for `sign_in`:
+
+    //index.js.jsx
+    ...
+    var Router = Backbone.Router.extend({
+    ...
+    sign_in: function(){
+        React.renderComponent(
+          <SignInView />,
+          document.getElementById('authentication')
+        )
+      }
+    });
+    
+Run `rspec` again. You will see the error:
+    
+    expected to find text "Welcome Truong Dung" in "Sign in |     Sign up New Blog All Blogs:"
+    
     
