@@ -79,3 +79,50 @@ Run `rspec` again to see next error:
      
 This error says that there is no HTML element to input. Let's create it.
 
+Create file `authentication.jsx` in `app/assets/javascripts`:
+
+    /**
+     * @jsx React.DOM
+     */
+    
+     var Authentication = React.createClass({
+     	getInitialState: function(){
+     		return {};
+     	},
+     	componentWillMount: function(){
+    
+     	},
+     	render: function(){
+     		
+     			return (
+     				<p>
+     					<a href="#/sign_in">Sign in</a> | <a href="#/sign_up">Sign up</a>
+     				</p>
+     			);
+     		}
+     	
+     });
+     
+Add it to `app/assets/javascripts/index.js.jsx` file:
+
+    var HomeView = React.createClass({
+    ...
+    render : function() {
+      	var x = this.state.blogs.map(function(d){
+      		return <li key={"blogs_" + d.id}><a href={"#/blogs/" + d.id}>{d.name}</a></li>
+      	});
+        return (
+        	<div>
+          <Authentication />
+        	<p>{this.props.message}</p>
+        	<a href="#/blogs/new">New Blog</a>
+        	<br />
+        	<h3>All Blogs:</h3>
+        	<ul>{x}</ul>
+        	</div>
+        );
+      }
+    ...
+    });
+    
+    
