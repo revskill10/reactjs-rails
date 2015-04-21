@@ -26,8 +26,8 @@ I don't want to do a full reload page after clicking 'Sign in' or 'Sign up' butt
 
 Let's make this spec pass.
 
-The error is: `Uninitialized constant User`. So let's create model `User` in `models/User.rb`:
+The error is: `Uninitialized constant User`. So let's create model `User` by running the generator:
 
-    class User < ActiveRecord::Base
+    rails g model User fullname email password_encrypted
     
-    end
+    
