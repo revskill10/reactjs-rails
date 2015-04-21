@@ -29,5 +29,48 @@ Let's make this spec pass.
 The error is: `Uninitialized constant User`. So let's create model `User` by running the generator:
 
     rails g model User fullname email password_encrypted
+    bundle exec rake db:migrate
+
+Run `rspec` again:
+
+    bundle exec rspec
     
+The error is : `Uninitialized constant CreateUser`. So let's create it in `app/services/create_user.rb`
+
+    class CreateUser
+    	def self.perform(options)
+    
+    	end
+    end
+    
+Don't forget to add the `services` folder to `autoload_path` in `config/application.rb`:    
+
+    require File.expand_path('../boot', __FILE__)
+
+    require 'rails/all'
+    
+    # Require the gems listed in Gemfile, including any gems
+    # you've limited to :test, :development, or :production.
+    Bundler.require(:default, Rails.env)
+    
+    module Testreact
+      class Application < Rails::Application
+        # Settings in config/environments/* take precedence over those specified here.
+        # Application configuration should go into files in config/initializers
+        # -- all .rb files in that directory are automatically loaded.
+    
+        # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
+        # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
+        # config.time_zone = 'Central Time (US & Canada)'
+    
+        # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
+        # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+        # config.i18n.default_locale = :de
+        config.assets.initialize_on_precompile = true
+        config.autoload_paths += %W( #{config.root}/app/services )
+      end
+    end
+
+Run `rspec` again to see next error:
+
     
