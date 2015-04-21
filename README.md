@@ -26,9 +26,6 @@ Hope you enjoy this journey!
 
 - [HPU Online Rollcall Attendance](http://qlgd.hpu.edu.vn)([Source code](https://github.com/checkraiser/qlgd))
 
-# Roadmap:
-
-- Write chapters using Flux and refactor project.
 
 # Contact:
 
