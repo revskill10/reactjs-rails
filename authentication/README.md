@@ -73,4 +73,9 @@ Don't forget to add the `services` folder to `autoload_path` in `config/applicat
 
 Run `rspec` again to see next error:
 
-    
+    Failure/Error: click_link 'Sign in'
+    Capybara::ElementNotFound:
+     Unable to find link "Sign in"
+     
+This error says that there is no HTML element to input. Let's create it.
+
