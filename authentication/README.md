@@ -13,9 +13,9 @@ I don't want to do a full reload page after clicking 'Sign in' or 'Sign up' butt
 
     require 'rails_helper'
 
-    feature 'Guest can sign in' do
-    	scenario 'Guest can sign in', :js => true do
-    		User.create(fullname: 'Truong Dung', email: 'test@example.com', password: 'password', password_confirmation: 'password')
+    feature 'Guest can sign in' do 
+    	scenario 'Guest can sign in', :js => true do 
+    		CreateUser.perform(fullname: 'Truong Dung', email: 'test@example.com', password: 'password')
     		visit '/'
     		click_link 'Sign in'
     		fill_in 'email', :with => 'test@example.com'
@@ -26,3 +26,8 @@ I don't want to do a full reload page after clicking 'Sign in' or 'Sign up' butt
 
 Let's make this spec pass.
 
+The error is: `Uninitialized constant User`. So let's create model `User` in `models/User.rb`:
+
+    class User < ActiveRecord::Base
+    
+    end
