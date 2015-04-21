@@ -105,6 +105,11 @@ Create file `authentication.jsx` in `app/assets/javascripts`:
      
 Add it to `app/assets/javascripts/index.js.jsx` file:
 
+    /**
+     * @jsx React.DOM
+     */
+    //= require authentication  
+    ...
     var HomeView = React.createClass({
     ...
     render : function() {
