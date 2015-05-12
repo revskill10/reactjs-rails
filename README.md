@@ -27,9 +27,5 @@ Hope you enjoy this journey!
 - [HPU Online Rollcall Attendance](http://qlgd.hpu.edu.vn)([Source code](https://github.com/checkraiser/qlgd))
 
 
-# Contact:
 
-- [My blog](http://vocaja.com)
-- [My Twitter](https://twitter.com/revskill)
-- [My Google Play applications](https://play.google.com/store/apps/developer?id=FPMI)
-- [Source code used in this book](https://github.com/checkraiser/reactjs-rails-code)
+
