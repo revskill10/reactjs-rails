@@ -6,7 +6,7 @@
 * [First spec: Create blog](first_spec/README.md)
 * [Refactor first spec](refactor_first_spec/README.md)
 * [Second spec: View blog](second_spec_view_blog/README.md)
+* [Webpack with Rails](webpack_with_rails.md)
 * [Authentication](authentication/README.md)
 * [What is Flux and Why using it ?](what_is_flux_and_why_using_it.md)
-* [Webpack with Rails](webpack_with_rails.md)
 
