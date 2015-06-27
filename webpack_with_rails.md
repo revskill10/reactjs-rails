@@ -209,3 +209,7 @@ And load all of our application code using Webpack as shown before.
 Conclusion
 
 Webpack offers an interesting alternative to the Rails Asset pipeline with better modularisation and dependency loading. I believe the Asset Pipeline is still a solid way of doing things, but Webpack is worth considering for heavy JavaScript applications with Rails.
+
+## Practice
+
+Now it's time to get `webpack` running with `rails`.
