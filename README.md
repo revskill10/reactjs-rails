@@ -8,6 +8,8 @@ The aim of the book is to build a blogging platform in which each author could h
 
 The project will follow BDD methodology. Each feature should be described with an acceptance test case first before any coding.
 
+You will learn how to use latest technologies from Ruby on Rails, React.JS, Flux architecture pattern, Webpack, ES6 javascript, React-Router to make a real world web application.
+
 Hope you enjoy this journey!
 
 # Table of contents
